@@ -1,0 +1,153 @@
+.boardWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.cardsBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.cardBlock {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.statusBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.statusText {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.win {
+    color: #0fbe0f;
+}
+
+.lose {
+    color: red;
+}
+
+.cardBlock img {
+    width: 226px;
+    height: 314px;
+    border-radius: 12px;
+    perspective: 1000px;
+}
+
+.flipCardBlock{
+    background-color: transparent;
+    width: 226px;
+    height: 314px;
+    perspective: 1000px;
+}
+
+.flipCardInner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipCardBlock:hover .flipCardInner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flipCardFront, .flipCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flipCardFront img{
+    width: 226px;
+    height: 314px;
+    background-color: #bbb;
+    color: black;
+    border-radius: 12px;
+}
+
+/* Style the back side */
+.flipCardBack {
+    border-radius: 12px;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flipCardBlock button {
+    position: absolute;
+    right: -188px;
+    top: 120px;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.flipCardBlock button:hover {
+    box-shadow: -1px 1px 27px 14px rgba(34, 60, 80, 0.2);
+}
+
+.cardLeft:hover {
+    box-shadow: 10px 2px 8px 15px rgba(34, 60, 80, 0.2);
+}
+
+.cardRight:hover {
+    box-shadow: -10px 2px 8px 15px rgba(34, 60, 80, 0.2);
+}
+
+
+
+
+.cardBlock button {
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.cardBlock button:hover {
+    box-shadow: -1px 1px 27px 14px rgba(34, 60, 80, 0.2);
+}
+
+.cardLeft:hover {
+    box-shadow: 10px 2px 8px 15px rgba(34, 60, 80, 0.2);
+}
+
+.cardRight:hover {
+    box-shadow: -10px 2px 8px 15px rgba(34, 60, 80, 0.2);
+}
+
+.enterRate input {
+    width: 110px;
+    padding: 7px;
+    font-size: 24px;
+}
+
+.dollar {
+    font-size: 24px;
+}
+
+.errorText {
+    margin-top: 5px;
+    margin-left: 40px;
+    color: red;
+}

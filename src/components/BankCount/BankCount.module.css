@@ -1,0 +1,11 @@
+.bankWrap {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 26px;
+}
+
+.bankWrap span {
+    padding: 0 15px 10px;
+    border-bottom: 3px solid #7f917e;
+}
