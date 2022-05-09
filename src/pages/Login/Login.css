@@ -75,3 +75,12 @@
     color: #0fbe0f;
     font-weight: 500;
 }
+
+@media screen and (max-width: 600px) {
+    .form-block{
+        padding: 10px;
+    }
+    .form-item{
+        min-width: 335px;
+    }
+}
