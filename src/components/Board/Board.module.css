@@ -45,76 +45,6 @@
     perspective: 1000px;
 }
 
-.flipCardBlock{
-    background-color: transparent;
-    width: 226px;
-    height: 314px;
-    perspective: 1000px;
-}
-
-.flipCardInner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.flipCardBlock:hover .flipCardInner {
-    transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flipCardFront, .flipCardBack {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flipCardFront img{
-    width: 226px;
-    height: 314px;
-    background-color: #bbb;
-    color: black;
-    border-radius: 12px;
-}
-
-/* Style the back side */
-.flipCardBack {
-    border-radius: 12px;
-    color: white;
-    transform: rotateY(180deg);
-}
-
-.flipCardBlock button {
-    position: absolute;
-    right: -188px;
-    top: 120px;
-    padding: 15px 30px;
-    font-weight: bold;
-    font-size: 22px;
-    border: none;
-    cursor: pointer;
-}
-
-.flipCardBlock button:hover {
-    box-shadow: -1px 1px 27px 14px rgba(34, 60, 80, 0.2);
-}
-
-.cardLeft:hover {
-    box-shadow: 10px 2px 8px 15px rgba(34, 60, 80, 0.2);
-}
-
-.cardRight:hover {
-    box-shadow: -10px 2px 8px 15px rgba(34, 60, 80, 0.2);
-}
-
-
-
 
 .cardBlock button {
     padding: 15px 30px;
@@ -150,4 +80,26 @@
     margin-top: 5px;
     margin-left: 40px;
     color: red;
+}
+
+@media screen and (max-width: 600px) {
+    .cardBlock img {
+        width: 62px;
+        height: 86px;
+        border-radius: 2px;
+    }
+    .cardBlock button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    .enterRate input{
+        font-size: 20px;
+        padding: 5px;
+        width: 62px;
+        margin-top: 20px;
+    }
+    .statusText{
+        font-size: 15px;
+    }
 }
