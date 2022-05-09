@@ -1,5 +1,5 @@
 import { CardPosition } from "../components/Board/Board";
-import { actions, statusType } from "../store/reducers/mainReducer";
+import { statusType } from "../store/reducers/mainReducer";
 
 type CardsValueType = {
   [key in string]: number;
