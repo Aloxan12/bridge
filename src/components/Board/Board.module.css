@@ -82,10 +82,32 @@
     color: red;
 }
 
+@media screen and (max-width: 1200px) {
+    .cardBlock img {
+        width: 150px;
+        height: auto;
+        border-radius: 2px;
+    }
+    .cardBlock button {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .cardBlock img {
+        width: 120px;
+        border-radius: 2px;
+    }
+    .cardBlock button {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .cardBlock img {
         width: 62px;
-        height: 86px;
         border-radius: 2px;
     }
     .cardBlock button {
