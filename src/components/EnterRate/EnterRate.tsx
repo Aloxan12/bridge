@@ -16,9 +16,9 @@ export const EnterRate = ({ rate, setRate, error, setError }: IEnterRate) => {
         value={rate}
         onChange={(e) => {
           setError("");
-          setRate(+e.currentTarget.value.replace("-", ""));
+          setRate(+e.currentTarget.value.replace(/[^0-9]/g, ""));
         }}
-        type="number"
+        type="text"
         required
       />
       <span className={styles.dollar}> $</span>
