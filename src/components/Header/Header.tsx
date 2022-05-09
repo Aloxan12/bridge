@@ -14,6 +14,7 @@ export const Header = () => {
   const dispatch = useDispatch();
 
   const isSameUrl = !!useMatch("login");
+  const sameUrl = !!useMatch("bridge");
 
   useEffect(() => {
     if (!localStorage.getItem("isAuth")) {
@@ -21,7 +22,7 @@ export const Header = () => {
       dispatch(actions.loginAC(false));
     } else {
       dispatch(actions.loginAC(true));
-      if (isSameUrl) {
+      if (isSameUrl || sameUrl) {
         navigate("/");
       }
     }
